@@ -29,6 +29,7 @@ add_action( 'init', 'create_posttype' );
 function get_project_list( $data ) {
 	$posts = get_posts( array(
 		'post_type' => 'project',
+		"s" => $data['search'],
 	) );
  
 	if ( empty( $posts ) ) {
